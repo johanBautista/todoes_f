@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview", 
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,vue,css,scss,json,md}\"",
+    "lint": "eslint src --fix",
+    "fix": "npm run format && npm run lint && echo '✅ fix - OK' || echo '❌ fix - KO' ",
+    "preview": "vite preview",
     "test": "vitest"
   },
   "dependencies": {
@@ -15,14 +18,24 @@
     "vue-i18n": "^11.0.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.20.0",
+    "@typescript-eslint/parser": "^8.20.0",
     "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/eslint-config-typescript": "^14.3.0",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.7.0",
     "cypress": "^13.17.0",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-vue": "^9.32.0",
     "jsdom": "^26.0.0",
+    "prettier": "^3.4.2",
     "typescript": "~5.6.2",
     "vite": "^6.0.5",
     "vitest": "^2.1.8",
+    "vue-eslint-parser": "^9.4.3",
     "vue-tsc": "^2.2.0"
   }
 }
