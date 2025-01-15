@@ -22,6 +22,7 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "shims-vue.d.ts" // Incluye el archivo de declaración
+    "shims-vue.d.ts", // Incluye el archivo de declaración
+    "src/tests/dedede"
   ]
 }
